@@ -1,15 +1,5 @@
 # Swisstronik Tesnet Techinal Task 3 (Mint a ERC-721 Token)
 
-link : [Click!](https://www.swisstronik.com/testnet2/dashboard)
-
-Feel free donate to my EVM address
-
-EVM :
-
-```bash
-0x9902C3A98Df4b240ad5496cC26F89bAb8058f4aE
-```
-
 ## Steps
 
 ### 1. Clone Repository
@@ -30,7 +20,7 @@ npm install
 
 ### 3. Set .env File
 
-create .env file in root project
+Create a .env file in the root directory of the project:
 
 ```bash
 PRIVATE_KEY="your private key"
@@ -38,9 +28,11 @@ PRIVATE_KEY="your private key"
 
 ### 4. Update Smart Contract (Skipp if you won't modify NFT name)
 
-- Open contracts folder
-- Open Nft.sol file
-- Feel free to modify token name and token symbol
+If you want to modify the NFT name or symbol, follow these steps:
+
+- Navigate to the contracts folder
+- Open the Nft.sol file
+- Modify the token name and symbol as desired
 
 ```
 // SPDX-License-Identifier: MIT
@@ -53,7 +45,7 @@ contract TestNFT is ERC721 {
 
     event NFTMinted(address recipient, uint256 tokenId);
 
-    constructor() ERC721("IzzyNFT", "IZZNFT") {}
+    constructor() ERC721("JomokNFT", "JMKNFT") {}
 
     function mintNFT(address recipient) public returns (uint256) {
         _currentTokenId += 1;
@@ -72,19 +64,19 @@ contract TestNFT is ERC721 {
 
 ```
 
-### 5. Compile Smart Contract
+### 5. Compile the Smart Contract
 
 ```bash
 npm run compile
 ```
 
-### 6. Deploy Smart Contract
+### 6. Deploy the Smart Contract
 
 ```bash
 npm run deploy
 ```
 
-### 7. Mint Token
+### 7. Mint a Token
 
 ```bash
 npm run mint
@@ -92,13 +84,9 @@ npm run mint
 
 ### 8. Finsihed
 
-- Open the deployed-adddress.ts (location in utils folder)
-- Copy the address and paste the address into testnet dashboard
-- Open the tx-hash.txt (location in utils folder)
-- Copy the address and paste the tx hash link into testnet dashboard
-- push this project to your github and paste your repository link in testnet dashboard
+- Open deployed-address.ts in the utils folder and copy the address
+- Paste the address into the testnet dashboard
+- Open tx-hash.txt in the utils folder and copy the transaction hash link
+- Paste the transaction hash link into the testnet dashboard
+- Push this project to your GitHub and paste your repository link in the testnet dashboard
 
-by :
-github : [Mnuralim](https://github.com/Mnuralim)
-twitter : @Izzycracker04
-telegram : @fitriay19
